@@ -1,4 +1,4 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import PostsManagerReducer from "../components/systems/PostsManager/PostsManager.slice";
 import CreateNewPostReducer from "../components/systems/PostEditor/components/CreateNewPost/CreateNewPost.slice";
 

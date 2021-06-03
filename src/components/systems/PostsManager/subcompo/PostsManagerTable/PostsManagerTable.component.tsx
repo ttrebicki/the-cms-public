@@ -8,33 +8,33 @@ import useStyles from "../../PostsManager.stylesMUI";
 import { selectPosts } from "../../PostsManager.slice";
 
 const PostsManagerTable = () => {
+  const posts = useSelector(selectPosts);
 
-    const posts = useSelector(selectPosts);
+  const rows = posts.map((post) => {
+    return {
+      id: post._id,
+      postContent: post.content,
+      postTitle: post.title,
+      friendlyCreateDate: post.friendly_create_date,
+      thumbnailUrl: post.thumbnailImage,
+    };
+  });
 
-    const rows = posts.map(post => {
-        return {
-            id: post._id,
-            postContent: post.content,
-            postTitle: post.title,
-            friendlyCreateDate: post.friendly_create_date,
-            thumbnailUrl: post.thumbnailImage,
-        }
-    })
+  const classes = useStyles();
 
-    const classes = useStyles();
-
-    return (
-        <div className={classes.table}>
-            <DataGrid
-                columns={columns}
-                rows={rows}
-                pageSize={6}
-                checkboxSelection
-                onRowClick={(row) => {
-                    alert(row.id)
-                }}/>
-        </div>
-    )
-}
+  return (
+    <div className={classes.table}>
+      <DataGrid
+        columns={columns}
+        rows={rows}
+        pageSize={6}
+        checkboxSelection
+        onRowClick={(row) => {
+          alert(row.id);
+        }}
+      />
+    </div>
+  );
+};
 
 export default PostsManagerTable;

@@ -1,27 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
 
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from "./serviceWorker";
 
-import { ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from "@material-ui/core/styles";
 
-import { store } from './app/store';
+import { store } from "./app/store";
 
-import App from './App';
+import App from "./App";
 
 import { theme } from "./config/mui/mui";
-import './index.css';
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-        <ThemeProvider theme={theme}>
-                <App />
-        </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change
