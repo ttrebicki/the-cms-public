@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { useSelector } from 'react-redux';
 import { Button, TextField } from '@material-ui/core';
-import {Editor, EditorState} from 'draft-js';
+import { Editor, EditorState } from 'draft-js';
 
 import { getSelectedPost } from '../../../state/posts/slices/PostsManager.slice';
 import SafeGrid from '../../layout/SafeGrid/SafeGrid.component';
@@ -18,7 +18,7 @@ import PostLivePreviewComponent from '../PostLivePreview';
 
 const EditPost = ({ usage }: IEditPostProps) => {
 	const [editorState, setEditorState] = useState(() =>
-		EditorState.createEmpty(),
+		EditorState.createEmpty()
 	);
 	const selectedPost = useSelector(getSelectedPost);
 	const isCreate = usage === 'create';

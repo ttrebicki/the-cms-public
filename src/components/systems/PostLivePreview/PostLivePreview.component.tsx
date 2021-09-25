@@ -7,15 +7,15 @@ const PostLivePreviewComponent = () => {
 	const currentPost = useAppSelector(getSelectedPost);
 
 	if (!currentPost) {
-		return null
+		return null;
 	}
-	const HTML = new RegExp('/<\\/?[a-z][\\s\\S]*>/i')
-	const isContentHTML = HTML.test(currentPost.content)
+	const HTML = new RegExp('/<\\/?[a-z][\\s\\S]*>/i');
+	const isContentHTML = HTML.test(currentPost.content);
 
-	console.log(isContentHTML)
+	console.log(isContentHTML);
 	return (
 		<SafeGrid direction={'column'} spacing={32}>
-			<img src={currentPost.thumbnailImage} width={420} height={'auto'}/>
+			<img src={currentPost.thumbnailImage} width={420} height={'auto'} />
 			<Typography variant={'h2'}>{currentPost.title}</Typography>
 			<Divider />
 			<div dangerouslySetInnerHTML={{ __html: currentPost.content }} />
