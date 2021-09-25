@@ -1,4 +1,4 @@
-import { IAction } from '../../layoutComponents/PageLayout/PageLayout.types';
+import { IAction } from '../../layout/PageLayout/PageLayout.types';
 
 export interface IButtonRowProps {
 	actions: IAction[];

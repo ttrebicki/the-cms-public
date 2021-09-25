@@ -1,46 +1,35 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
 
 import { Typography } from '@material-ui/core';
 
 import {
 	PageLayoutContent,
 	PageLayoutHeader,
-} from '../../layoutComponents/PageLayout/PageLayout.component';
-import SafeGrid from '../../layoutComponents/SafeGrid/SafeGrid.component';
-
-import PostsManageActions from './PostsManager.header';
-import PostsManagerTable from './subcompo/PostsManagerTable/PostsManagerTable.component';
-import getPostsFromAPI from '../../../models/global/actions/getPostsFromApi';
-import EditPost from '../PostEditor/components/EditPost/EditPost.component';
-import {
-	showCreateNewPostFromState,
-	showEditPostFromState,
-} from './PostsManager.slice';
+} from '../../layout/PageLayout/PageLayout.component';
+import SafeGrid from '../../layout/SafeGrid/SafeGrid.component';
+import postsManageActions from './PostsManager.header';
+import PostsManagerTable from './components/PostsManagerTable/PostsManagerTable.component';
+import { getPostsFromAPI } from '../../../state/posts/thunks';
+import texts from '../../../consts/texts';
+import { useAppDispatch } from '../../../state/hooks';
 
 const PostsManager = () => {
-	const dispatch = useDispatch();
-	dispatch(getPostsFromAPI());
+	const dispatch = useAppDispatch();
+	const txt = texts.postManager;
 
-	const showCreateNewPost = useSelector(showCreateNewPostFromState);
-	const showEditPost = useSelector(showEditPostFromState);
-
-	const headerText = 'Posts manager';
-	const manageText = 'Manage your posts';
-	const manageDescriptionText =
-		'Here you can make changes to your posts, arrange them or delete them.';
+	useEffect(() => {
+		dispatch(getPostsFromAPI());
+	});
 
 	return (
 		<SafeGrid spacing={32}>
-			<PageLayoutHeader title={headerText} actions={PostsManageActions} />
+			<PageLayoutHeader title={txt.header} actions={postsManageActions} />
 			<PageLayoutContent>
-				{showCreateNewPost && <EditPost usage={'create'} />}
 				<SafeGrid spacing={32}>
 					<SafeGrid spacing={16}>
-						<Typography variant={'h4'}>{manageText}</Typography>
-						<Typography variant={'body1'}>{manageDescriptionText}</Typography>
+						<Typography variant={'h4'}>{txt.managePosts}</Typography>
+						<Typography variant={'body1'}>{txt.managePostsDesc}</Typography>
 						<PostsManagerTable />
-						{showEditPost && <EditPost usage={'edit'} />}
 					</SafeGrid>
 				</SafeGrid>
 			</PageLayoutContent>

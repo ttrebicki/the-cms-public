@@ -1,17 +1,11 @@
-import { store } from '../../../app/store';
-import { toggleCreateNewPost } from './PostsManager.slice';
+import { IAction } from '../../layout/PageLayout/PageLayout.types';
+import { Routes } from '../../../router/routes';
 
-import { IAction } from '../../layoutComponents/PageLayout/PageLayout.types';
-
-const PostsManageActions: IAction[] = [
+const postsManageActions: IAction[] = [
 	{
-		callback: () => store.dispatch(toggleCreateNewPost()),
+		href: Routes.CREATE_POST,
 		label: 'Create New Post',
-	},
-	{
-		callback: () => {},
-		label: 'Manage Posts',
 	},
 ];
 
-export default PostsManageActions;
+export default postsManageActions;

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fontsource/cormorant-garamond": "^4.5.0",
     "@material-ui/core": "^4.11.4",
     "@material-ui/data-grid": "^4.0.0-alpha.30",
     "@material-ui/icons": "^4.11.2",
@@ -18,6 +19,7 @@
     "axios": "^0.21.1",
     "classnames": "^2.3.1",
     "dotenv": "^9.0.2",
+    "draft-js": "^0.11.7",
     "formik": "^2.2.6",
     "mongodb": "^3.6.6",
     "mongodb-client-encryption": "^1.2.3",
@@ -34,13 +36,13 @@
   "prettier": {
     "jsxSingleQuote": true,
     "trailingComma": "es5",
-    "tabWidth": 2,
+    "tabWidth": 1,
     "semi": true,
     "singleQuote": true,
     "useTabs": true
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start & nodemon \"../node-mongo-server/index\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -62,6 +64,7 @@
     ]
   },
   "devDependencies": {
+    "@types/draft-js": "^0.11.5",
     "@types/react-router-dom": "^5.1.7"
   }
 }
