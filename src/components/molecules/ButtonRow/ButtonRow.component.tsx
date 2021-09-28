@@ -14,7 +14,7 @@ const ButtonRow = ({ actions }: IButtonRowProps) => {
 		<SafeGrid spacing={8} direction={'row'}>
 			{actions.map((action, index) => {
 				{
-					/* TODO: refactor */
+					/* TODO: refactor links */
 				}
 				if (action.href) {
 					if (isRedirect) {
