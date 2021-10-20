@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/the-cms-public/static/css/main.eec11efe.chunk.css",
-    "main.js": "/the-cms-public/static/js/main.c5547df6.chunk.js",
-    "main.js.map": "/the-cms-public/static/js/main.c5547df6.chunk.js.map",
+    "main.js": "/the-cms-public/static/js/main.dfa3bbd8.chunk.js",
+    "main.js.map": "/the-cms-public/static/js/main.dfa3bbd8.chunk.js.map",
     "runtime-main.js": "/the-cms-public/static/js/runtime-main.7b37c0e2.js",
     "runtime-main.js.map": "/the-cms-public/static/js/runtime-main.7b37c0e2.js.map",
-    "static/js/2.320865c6.chunk.js": "/the-cms-public/static/js/2.320865c6.chunk.js",
-    "static/js/2.320865c6.chunk.js.map": "/the-cms-public/static/js/2.320865c6.chunk.js.map",
+    "static/js/2.18ab4789.chunk.js": "/the-cms-public/static/js/2.18ab4789.chunk.js",
+    "static/js/2.18ab4789.chunk.js.map": "/the-cms-public/static/js/2.18ab4789.chunk.js.map",
     "index.html": "/the-cms-public/index.html",
     "static/css/main.eec11efe.chunk.css.map": "/the-cms-public/static/css/main.eec11efe.chunk.css.map",
-    "static/js/2.320865c6.chunk.js.LICENSE.txt": "/the-cms-public/static/js/2.320865c6.chunk.js.LICENSE.txt",
+    "static/js/2.18ab4789.chunk.js.LICENSE.txt": "/the-cms-public/static/js/2.18ab4789.chunk.js.LICENSE.txt",
     "static/media/index.css": "/the-cms-public/static/media/poppins-v15-latin-regular.c14093ce.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.7b37c0e2.js",
-    "static/js/2.320865c6.chunk.js",
+    "static/js/2.18ab4789.chunk.js",
     "static/css/main.eec11efe.chunk.css",
-    "static/js/main.c5547df6.chunk.js"
+    "static/js/main.dfa3bbd8.chunk.js"
   ]
 }
