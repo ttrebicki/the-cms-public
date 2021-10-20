@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { INewPostResponse } from './types';
+import { Env } from '../../consts/env';
 
 class PostsApi {
 	public createNewPost(post: string): Promise<INewPostResponse> {
 		const createConfig = {
-			url: 'http://localhost:8080/api/posts',
+			url: `${Env.API_URL}/posts`,
 			headers: {
 				'Content-Type': 'application/json',
 			},
@@ -24,7 +25,7 @@ class PostsApi {
 
 	public editPost(id: string, post: string): Promise<INewPostResponse> {
 		const editConfig = {
-			url: `http://localhost:8080/api/posts/${id}`,
+			url: `${Env.API_URL}/posts/${id}`,
 			headers: {
 				'Content-Type': 'application/json',
 			},
@@ -42,7 +43,7 @@ class PostsApi {
 
 	public deletePost(id: string): Promise<void> {
 		const deleteConfig = {
-			url: `http://localhost:8080/api/posts/${id}`,
+			url: `${Env.API_URL}/posts/${id}`,
 			headers: {
 				'Content-Type': 'application/json',
 			},
@@ -61,8 +62,8 @@ class PostsApi {
 	public getPosts(id?: string): Promise<INewPostResponse> {
 		const getConfig = {
 			url: id
-				? `http://localhost:8080/api/posts/${id}`
-				: `http://localhost:8080/api/posts`,
+				? `${Env.API_URL}/posts/${id}`
+				: `${Env.API_URL}/posts`,
 			headers: {
 				'Content-Type': 'application/json',
 			},

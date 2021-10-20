@@ -4,6 +4,7 @@ import PostsApi from '../../../api/posts';
 import { IEditPostPayload } from '../../../components/systems/EditPost/EditPost.types';
 import { IPostFormData } from '../slices/types';
 import { store } from '../../store';
+import { Routes } from '../../../router/routes';
 
 const getPostsFromAPI = createAsyncThunk(
 	'getPostsFromAPI',
@@ -18,7 +19,9 @@ const createNewPost = createAsyncThunk(
 	async (post: IPostFormData) => {
 		const parsedPost = JSON.stringify(post);
 
-		await PostsApi.createNewPost(parsedPost);
+		await PostsApi.createNewPost(parsedPost)
+
+		window.location.replace(Routes.MANAGE_POSTS)
 	}
 );
 const editPost = createAsyncThunk(

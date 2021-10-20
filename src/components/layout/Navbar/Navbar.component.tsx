@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { AppBar, Toolbar } from '@material-ui/core';
 import { DescriptionOutlined, HomeOutlined } from '@material-ui/icons';
@@ -12,7 +12,7 @@ const Navbar = () => {
 		<>
 			<AppBar color={'secondary'} elevation={0}>
 				<SafeGrid mainColumn>
-					<Toolbar>
+					<Toolbar variant={'dense'}>
 						<IconLink
 							children={<HomeOutlined color={'primary'} />}
 							url={Routes.HOME}

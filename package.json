@@ -21,16 +21,21 @@
     "dotenv": "^9.0.2",
     "draft-js": "^0.11.7",
     "formik": "^2.2.6",
+    "gh-pages": "^3.2.3",
     "mongodb": "^3.6.6",
     "mongodb-client-encryption": "^1.2.3",
     "prettier": "^2.3.2",
     "qs": "^6.10.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-dropbox-chooser": "^0.0.5",
     "react-images-upload": "^1.2.8",
+    "react-markdown": "^7.0.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "rich-markdown-editor": "^11.18.6",
+    "styled-components": "^5.3.1",
     "typescript": "~4.1.5"
   },
   "prettier": {
@@ -42,7 +47,7 @@
     "useTabs": true
   },
   "scripts": {
-    "start": "react-scripts start & nodemon \"../node-mongo-server/index\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

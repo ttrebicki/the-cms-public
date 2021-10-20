@@ -33,8 +33,6 @@ const useFormikHook = ({ isCreate, isEdit, selectedPost }: IFormikProps) => {
 			isCreate
 				? dispatch(createNewPost(createPostPayload))
 				: dispatch(editPost(editPostPayload));
-
-			window.location.replace(Routes.MANAGE_POSTS);
 		},
 	});
 };

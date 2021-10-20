@@ -7,6 +7,11 @@ export const theme = createMuiTheme({
 				color: '#80d8ff',
 			},
 		},
+		MuiToolbar: {
+			dense: {
+				justifyContent: 'right',
+			},
+		},
 	},
 	palette: {
 		primary: {
