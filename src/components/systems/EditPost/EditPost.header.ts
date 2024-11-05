@@ -3,7 +3,7 @@ import { Routes } from '../../../router/routes';
 
 const editPostActions: IAction[] = [
 	{
-		href: Routes.MANAGE_POSTS,
+		href: Routes.HOME,
 		label: 'Back',
 	},
 ];

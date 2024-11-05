@@ -10,12 +10,10 @@ import { store } from '../../../state/store';
 const ButtonRow = ({ actions }: IButtonRowProps) => {
 	const [isRedirect, setRedirect] = useState(false);
 
+	/* TODO: refactor links */
 	return (
 		<SafeGrid spacing={8} direction={'row'}>
 			{actions.map((action, index) => {
-				{
-					/* TODO: refactor links */
-				}
 				if (action.href) {
 					if (isRedirect) {
 						return (

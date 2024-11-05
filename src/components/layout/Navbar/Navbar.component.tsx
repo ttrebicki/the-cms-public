@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { AppBar, Toolbar } from '@material-ui/core';
-import { DescriptionOutlined, HomeOutlined } from '@material-ui/icons';
+import { HomeOutlined } from '@material-ui/icons';
 
 import SafeGrid from '../SafeGrid/SafeGrid.component';
 import IconLink from '../../reusable/IconLink';
@@ -16,10 +16,6 @@ const Navbar = () => {
 						<IconLink
 							children={<HomeOutlined color={'primary'} />}
 							url={Routes.HOME}
-						/>
-						<IconLink
-							children={<DescriptionOutlined color={'primary'} />}
-							url={Routes.MANAGE_POSTS}
 						/>
 					</Toolbar>
 				</SafeGrid>
